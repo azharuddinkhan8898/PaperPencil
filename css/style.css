@@ -144,6 +144,7 @@ h2.sub-heading{
 .home-contact{background: #ff5555 url(../img/hello-pattern.png) right 18px no-repeat;background-size: 650px;}
 .panel.bg-contact{background:#f55 url(../img/contact/vector-smart-object-1.png) center bottom no-repeat;}
 .panel.bg-career{background:#8d0fef url(../img/career/vector-smart-object-2.png) bottom right no-repeat;}
+.process-head-img{margin-top:40%;}
 @media screen and (max-width: 800px){
   .col-sm-12.offset-2{margin-left:0;}
   .container{padding:0 80px;margin:0 }
