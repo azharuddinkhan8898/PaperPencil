@@ -5,8 +5,8 @@ $(function() {
     var quickEvents = false;
   if($(window).width() >= 960 ){
 
-
-    fullpage = $('#fullpage').fullpage({
+    if($("#fullpage").length){
+      fullpage = $('#fullpage').fullpage({
       css3: true,
       scrollBar: true,
       scrollingSpeed: 1100,
@@ -40,6 +40,9 @@ $(function() {
             
       },
   });
+    }
+
+   
 
 
 
@@ -108,10 +111,29 @@ $(function() {
           $('.section-nav ul li').eq(currentSlide - 1).trigger("click")
         }
 
-        $("body").append('<style>#process .section-notch::before{left: ' + ($(".process-head-img").offset().left - 60) + 'px;}</style>');
-        // $("#process .section-notch::before").css("left",$(".process-head-img").offset().left)
-        console.log($(".process-head-img").offset().left);
 
+
+        
+        // $("#process .section-notch::before").css("left",$(".process-head-img").offset().left)
+        
+
+        $(".hamberger-check").on("change", function(){
+          if($(this).is(":checked")){
+            $(".menu-wrapper, .header-wrapper").addClass("go")
+            
+          }
+          else{
+            $(".menu-wrapper, .header-wrapper").removeClass("go")
+          }
+        })
+
+        $(".menu-wrapper ul a").hover(function(){
+          $(".menu-wrapper").addClass("hoverd");
+          $(this).css("color", "#fff");
+        }, function(){
+          $(".menu-wrapper").removeClass("hoverd")
+          $(this).css("color", "");
+        })
         
         $('.section-nav ul li').click(function(){
             var secIndex = $(this).index();
