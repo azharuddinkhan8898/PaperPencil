@@ -6,7 +6,7 @@
     <title>paperpencil.io</title>
     <meta
       name="description"
-      content="We create brands, build products & marketing things."
+      content="We build products, create brands and marketing things."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" href="scss/main.min.css" />
     <style>
-    .header-wrapper .header img{
+      .header-wrapper .header img{
   width: 120px; 
   transition: all 0.5s ease;
 }
@@ -42,14 +42,24 @@
 }
 .header-wrapper.go{
   position: fixed;
+  background: transparent;
 }
 
 .header-wrapper {
-  position: absolute;
+  position: fixed;
   width: 100%;
   padding: 30px 0px;
   z-index: 99999;
+  background: #fff;
+  transition: all 0.4s ease;
+  top: 0px;
 }
+
+
+.header-wrapper.nostick{
+  top:-104px;
+}
+
 .header-wrapper .header{
   display: inline-block;
   float: left;
@@ -198,7 +208,62 @@ opacity 0.55s ease;
   background: #8d0fef;
   z-index: 9999;
   transition: all 0.5s ease;
-  padding: 150px 120px 90px;
+  
+}
+
+.menu-wrapper > .container {
+  padding: 150px 70px 60px;
+  border-bottom: 1px solid #6b00bf;
+}
+
+
+.menu-wrapper .social-wrapper .container{
+  padding: 40px 70px 40px;
+}
+
+.menu-wrapper .social-wrapper li{
+  list-style-type: none;
+  float: left;
+}
+.menu-wrapper .social-wrapper li a{
+  height: 38px;
+    width: 38px;
+    display: inline-block;
+    background: #fff;
+    margin-right: 35px;
+    border-radius: 50%;
+   
+}
+
+.menu-wrapper .social-wrapper li a.twitter {
+  background: #fff url(../img/menu/twitter.png);
+  background-size: auto 17px;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+.menu-wrapper .social-wrapper li a.ball {
+  background: #fff url(../img/menu/ball.png);
+  background-size: auto 17px;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+.menu-wrapper .social-wrapper li a.insta {
+  background: #fff url(../img/menu/insta.png);
+  background-size: auto 17px;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+.menu-wrapper .social-wrapper li a.m {
+  background: #fff url(../img/menu/m.png);
+  background-size: auto 17px;
+  background-repeat: no-repeat;
+  background-position: center;
+  
 }
 
 .menu-wrapper.go{
@@ -252,109 +317,275 @@ opacity 0.55s ease;
 
 .right-small-menu-wrapper{
   padding-left: 50px;
-}</style>
+}
+
+.menu-wrapper ul li.show-mobile{
+  display: none;
+}
+
+.header-wrapper.stay-top{
+  position: fixed;
+}
+
+
+@media only screen and (max-width: 800px){
+
+.header img{
+    max-width: unset;
+    display: block !important;
+  }
+
+  
+  .connect-tree{
+    height: auto;
+    padding-bottom: 200px;
+  }
+
+  .connected-tree-wrapper{
+    background-image: url(../img/Tree_&_Birds.png);
+    background-position: center 102%;
+    background-repeat: no-repeat;
+    background-size: 43%;
+  }
+  .connect-tree{
+    background: none;
+  }
+
+  .career-page .pattern-ico{
+    margin: 60px 0 100px;
+  }
+
+  .career-page  .panel .container{
+    padding-left: 30px;
+  }
+
+  .career-page  .full-height .panel{
+    height: auto;
+  }
+
+  .header-wrapper{
+    position: absolute;
+  }
+
+
+  .header-wrapper .side-menu li:not(.hamberger-menu){
+    display: none;
+  }
+
+  .header-wrapper .header img{
+    width: 100px;
+  }
+
+  .header-wrapper .header{
+    overflow: hidden;
+    width: 30px;
+  }
+
+  .menu-wrapper > .container{
+    padding: 100px 60px 60px;
+  }
+
+  .menu-wrapper .container > .row > div:last-child{
+    display: none;
+  }
+
+  .menu-wrapper ul a{
+    font-size: 28px;
+  }
+
+  .menu-wrapper ul li.show-mobile{
+    display: block;
+  }
+
+  .menu-wrapper .social-wrapper .container{
+    padding: 20px 50px 20px;
+  }
+
+  .menu-wrapper .social-wrapper li a{
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    background: #fff;
+    margin: 10px;
+    border-radius: 50%;
+  }
+
+  .menu-wrapper .social-wrapper li a.twitter {
+    background: #fff url(../img/menu/twitter.png);
+    background-size: auto 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu-wrapper .social-wrapper li a.ball {
+  background: #fff url(../img/menu/ball.png);
+  background-size: auto 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.menu-wrapper .social-wrapper li a.insta {
+  background: #fff url(../img/menu/insta.png);
+  background-size: auto 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.menu-wrapper .social-wrapper li a.m {
+  background: #fff url(../img/menu/m.png);
+  background-size: auto 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.home-contact{
+  background-position: right 30px;
+    background-size: 360px;
+    padding-top: 150px;
+}
+
+
+.menu-wrapper ul li.small a{
+  font-size: 18px;
+}
+
+.career-page .home-banner-wrapper{
+  height: auto;
+}
+.homepage .home-banner img{
+    width: 130px;
+  }
+  .homepage .home-banner h1{
+    margin: 25px 0px 54px;
+  }
+
+  .homepage .home-banner-container{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+
+   </style>
   </head>
 
-  <body>
+  <body class="homepage">
 
-      <div class="header-wrapper">
-          <div class="container">
-                  <div class="header">
-                          <img src="./img/logo/logo.png" srcset="./img/logo/logo@2x.png 2x, ./img/logo/logo@3x.png 3x" class="d-none d-md-block" />
-                      </div>
-                      <div class="side-menu-wrapper">
-                          <ul class="side-menu clearfix">
-                              <li>
-                                  <a href="#">Our Process</a>
-                              </li>
-                              <li>
-                                  <a href="#">Case Studies</a>
-                              </li>
-                              <li class="hamberger-menu">
-                                  <a href="javascript:void(0)">
-                                      <input type="checkbox" class="hamberger-check">
-                                      <span></span>
-                                      <span></span>
-                                      <span></span>
-                                      
-                                  </a>
-                              </li>
-                          </ul>
-                      </div>
-          </div>
-              
-      </div>
-
-
-      
-
-      <div class="menu-wrapper">
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-4">
-                      <ul class="left-menu">
+    <div class="header-wrapper">
+      <div class="container clearfix">
+              <div class="header">
+                <a href="./index.html">
+                      <img src="./img/logo/logo.png" srcset="./img/logo/logo@2x.png 2x, ./img/logo/logo@3x.png 3x" class="d-none d-md-block" />
+                    </a>
+                  </div>
+                  <div class="side-menu-wrapper">
+                      <ul class="side-menu clearfix">
                           <li>
-                              <a href="#">Services</a>
+                              <a href="./process.html">Our Process</a>
                           </li>
                           <li>
-                              <a href="#">Our Process</a>
+                              <a href="./index.html#caseStudiesCarousel">Case Studies</a>
                           </li>
-                          <li>
-                              <a href="#">Clients</a>
-                          </li>
-                          <li class="small">
-                              <a href="#">Careers</a>
-                          </li>
-                          <li class="small">
-                              <a href="#">Contact Us</a>
+                          <li class="hamberger-menu">
+                              <a href="javascript:void(0)">
+                                  <input type="checkbox" class="hamberger-check">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  
+                              </a>
                           </li>
                       </ul>
                   </div>
-                  <div class="col-md-8">
-                      <ul class="right-menu">
-                          <li>
-                              <a href="#">Case Studies</a>
-                          </li>
-                          
-                      </ul>
-                      <div class="row right-small-menu-wrapper">
-                          <div class="col-md-5">
-                              <ul class="right-small-menu">
-                                  <li>
-                                      <a href="">- OML NH7 Weekender</a>
-                                  </li>
-                                  <li>
-                                      <a href="">- Ithaka Travel</a>
-                                  </li>
-                                  <li>
-                                      <a href="">- Arka Venture Labs</a>
-                                  </li>
-                                  <li>
-                                      <a href="">- TopHire</a>
-                                  </li>
-                              </ul>
-                          </div>
-                          <div class="col-md-7">
-                              <ul class="right-small-menu">
-                                  <li>
-                                      <a href="">- Locus.sh</a>
-                                  </li>
-                                  <li>
-                                      <a href="">- Savsol Lubricants</a>
-                                  </li>
-                                  <li>
-                                      <a href="">- Chlorophyll</a>
-                                  </li>
-                                  <li>
-                                      <a href="">- TopHire</a>
-                                  </li>
-                              </ul>
-                          </div>
+      </div>
+          
+  </div>
+
+
+  
+
+  <div class="menu-wrapper">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                  <ul class="left-menu">
+                      <li>
+                          <a href="./index.html#services">Services</a>
+                      </li>
+                      <li>
+                          <a href="./process.html">Our Process</a>
+                      </li>
+                      <li class="show-mobile">
+                          <a href="./index.html#caseStudiesCarousel">Case Studies</a>
+                      </li>
+                      <li>
+                          <a href="./index.html#clients">Clients</a>
+                      </li>
+                      <li class="small">
+                          <a href="./career.html">Careers</a>
+                      </li>
+                      <li class="small">
+                          <a href="./contact.html">Contact Us</a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="col-md-8">
+                  <ul class="right-menu">
+                      <li>
+                          <a href="./index.html#caseStudiesCarouse">Case Studies</a>
+                      </li>
+                      
+                  </ul>
+                  <div class="row right-small-menu-wrapper">
+                      <div class="col-md-5">
+                          <ul class="right-small-menu">
+                              <li>
+                                  <a href="#">- OML NH7 Weekender</a>
+                              </li>
+                              <li>
+                                  <a href="#">- Ithaka Travel</a>
+                              </li>
+                              <li>
+                                  <a href="#">- Arka Venture Labs</a>
+                              </li>
+                              <li>
+                                  <a href="#">- TopHire</a>
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="col-md-7">
+                          <ul class="right-small-menu">
+                              <li>
+                                  <a href="#">- Locus.sh</a>
+                              </li>
+                              <li>
+                                  <a href="#">- Savsol Lubricants</a>
+                              </li>
+                              <li>
+                                  <a href="#">- Chlorophyll</a>
+                              </li>
+                              <li>
+                                  <a href="#">- TopHire</a>
+                              </li>
+                          </ul>
                       </div>
                   </div>
               </div>
           </div>
       </div>
+      <div class="social-wrapper">
+          <div class="container">
+              <ul class="">
+                  <li><a class="twitter" href="https://twitter.com/PaperPencilLabs" target="_blank"></a></li>
+              <li><a class="ball" href="https://dribbble.com/PaperPencil" target="_blank"></a></li>
+              <li><a class="insta" href="https://www.instagram.com/paperpencillabs/" target="_blank"></a></li>
+              <li><a class="m" href="https://medium.com/@paperpencil" target="_blank"></a></li>
+              </ul>
+              
+          </div>
+      </div>
+  </div>
     <!-- banner start -->
     <div class="section home-banner-container">
       <div class="container">
@@ -367,21 +598,20 @@ opacity 0.55s ease;
                 class="d-none d-md-block"
               />
               <img
-                src="./img/logo/logo.png"
-                srcset="./img/logo/logo@2x.png 2x, ./img/logo/logo@3x.png 3x"
+                src="./img/home/logo-hero.gif"
+                
                 class="d-block d-md-none"
               />
 
               <h1>
-                We create brands, build products
+                  We build products, create brands
                 <br class="d-none d-md-block" />
-                & marketing things.
+                and marketing things.
               </h1>
 
               <h2>
-                PaperPencil is a digital product and service studio, busy
-                designing and <br class="d-none d-md-block" />
-                building digital products, brands, and experiences.
+                  PaperPencil is a digital product development and design studio. <br class="d-none d-md-block" />
+                  We start right when your product exists as a Paper-Pencil sketch and we evolve it to completion.
               </h2>
             </div>
           </div>
@@ -509,7 +739,7 @@ opacity 0.55s ease;
                   </div>
                   <div class="col-md-6">
                     <div class="case-study__img">
-                      <img
+                      <img style="width:90%;"
                         src="./img/case-studies/locus/locus-screenshot.png"
                       />
                     </div>
@@ -561,17 +791,15 @@ opacity 0.55s ease;
     <!-- case studies end -->
 
     <!-- our services start -->
-    <div class="section section-content-only">
+    <div class="section section-content-only" id="services">
       <div class="section-center-aligned">
         <div class="container">
           <div class="section-intro">
             <div class="section-intro__heading">Our Services</div>
             <div class="section-intro__desc">
-              We are a brand consulting and product design studio driven by
-              brands, content, design, and technology. We combine Digital
-              Strategy, UX, Design, and Technology to help clients think beyond
-              the ordinary thereby extending the design and development
-              departments of the most innovative companies.
+                We are a product design and development studio driven by the appetite for a simple and efficient life.
+                We believe remarkable products bring us one step closer to such a life.
+                We combine Digital Strategy, UX ,Design and Technology to help clients think beyond the ordinary, thereby extending design and development departments of the most innovative companies.
             </div>
           </div>
 
@@ -580,7 +808,7 @@ opacity 0.55s ease;
               <div class="services-list" id="designServiceList">
                 <div class="services-list__title">Design</div>
                 <ul>
-                  <li>User Experience Design</li>
+                  <li>User Experience Desig</li>
                   <li>User Interface Design</li>
                   <li>Interaction Design</li>
                 </ul>
@@ -609,7 +837,7 @@ opacity 0.55s ease;
           </div>
 
           <div class="services-footnote">
-            We create the future for our clients in the present. Know More about
+            We create the future for our clients in the present. <a class="know-more" href="./process.html" style="font-style: italic; text-decoration: underline;color: #ff5555;">Know More</a> about
             our process.
           </div>
         </div>
@@ -618,16 +846,14 @@ opacity 0.55s ease;
     <!-- our services end -->
 
     <!-- our clients start -->
-    <div class="section section-bg-grey section-content-only">
+    <div class="section section-bg-grey section-content-only" id="clients">
       <div class="section-center-aligned">
         <div class="container">
           <div class="section-intro">
             <div class="section-intro__heading">Our Clients</div>
             <div class="section-intro__desc">
-              We work with companies of all shapes and sizes from all corners of
-              the globe. We believe in client partnerships rather than being a
-              supplier or an outsourced agency to work with on only
-              transactional basis.
+                We use our digital product design and development expertise to achieve quantifiable business goals, build a strong design framework early on and empower our clients to maintain a consistent product. We work with organizations of any size or location.
+                We believe in client partnerships rather than being a supplier or an outsourced agency to work with on only transnational basis.
             </div>
           </div>
 
@@ -652,13 +878,10 @@ opacity 0.55s ease;
                 />
               </div>
               <div class="col-6 col-md-3 client-list__card">
-                <img
-                  src="./img/clients/chlorophyll/chlorophyll-logo.png"
-                  srcset="
-                    ./img/clients/chlorophyll/chlorophyll-logo@2x.png 2x,
-                    ./img/clients/chlorophyll/chlorophyll-logo@3x.png 3x
-                  "
-                />
+                  <img src="img/clients/savita/logo.png"
+                  srcset="img/clients/savita/logo@2x.png 2x,
+                          img/clients/savita/logo@3x.png 3x"
+                  class="logo">
               </div>
               <div class="col-6 col-md-3 client-list__card">
                 <img
@@ -670,13 +893,10 @@ opacity 0.55s ease;
                 />
               </div>
               <div class="col-6 col-md-3 client-list__card">
-                <img
-                  src="./img/clients/savsol/savsol-logo.png"
-                  srcset="
-                    ./img/clients/savsol/savsol-logo@2x.png 2x,
-                    ./img/clients/savsol/savsol-logo@3x.png 3x
-                  "
-                />
+                  <img src="img/clients/chlorophyll/vector-smart-object.png"
+                  srcset="img/clients/chlorophyll/vector-smart-object@2x.png 2x,
+                          img/clients/chlorophyll/vector-smart-object@3x.png 3x"
+                  class="Vector-Smart-Object">
               </div>
               <div class="col-6 col-md-3 client-list__card">
                 <img
@@ -963,6 +1183,21 @@ opacity 0.55s ease;
           $(".menu-wrapper").removeClass("hoverd")
           $(this).css("color", "");
         })
+
+        if($(window).width() >= 960 ){
+
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+          if (prevScrollpos > currentScrollPos) {
+            $(".header-wrapper").removeClass("nostick");
+          } else {
+            $(".header-wrapper").addClass("nostick");
+          }
+          prevScrollpos = currentScrollPos;
+        }
+      }
+
       })
       window.dataLayer = window.dataLayer || [];
       function gtag() {
