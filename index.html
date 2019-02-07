@@ -69,6 +69,35 @@
   float: right;
 }
 
+.view-case-study{
+  border: 1px solid #fff;
+    padding: 7px 30px;
+    border-radius: 20px;
+    margin-top: 40px;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+.view-case-study:hover{
+  background: #fff;
+  color: transparent;
+}
+
+#caseStudiesCarousel .carousel-item:nth-child(1) .view-case-study:hover{
+  color: #30302d
+}
+
+#caseStudiesCarousel .carousel-item:nth-child(2) .view-case-study:hover{
+  color: #f6566d
+}
+
+#caseStudiesCarousel .carousel-item:nth-child(3) .view-case-study:hover{
+  color: #5f7eae
+}
+
+#caseStudiesCarousel .carousel-item:nth-child(4) .view-case-study:hover{
+  color: #75aa2a
+}
+
 .header-wrapper .side-menu{
   list-style-type: none;
   text-transform: none;
@@ -299,7 +328,7 @@ opacity 0.55s ease;
 }
 
 .menu-wrapper.hoverd ul a{
-  color: rgba(255,255,255,0.4);
+  opacity: 0.4;
 }
 
 .menu-wrapper ul li.small a{
@@ -335,7 +364,9 @@ opacity 0.55s ease;
     display: block !important;
   }
 
-  
+  .view-case-study{
+    margin-top:30px;
+  }
   .connect-tree{
     height: auto;
     padding-bottom: 200px;
@@ -626,7 +657,7 @@ opacity 0.55s ease;
         id="caseStudiesCarousel"
         class="carousel slide carousel-fade"
         data-ride="carousel"
-        data-interval="5000"
+        data-interval="300000"
         data-hover="false"
         data-ride="true"
       >
@@ -665,6 +696,7 @@ opacity 0.55s ease;
                         />
                         for the soul of Indian Music.
                       </div>
+                      <a href="" class="view-case-study">View Case Study</a>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -699,6 +731,7 @@ opacity 0.55s ease;
                         />
                         for the very young and vibrant hospitality brand.
                       </div>
+                      <a href="" class="view-case-study">View Case Study</a>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -735,6 +768,7 @@ opacity 0.55s ease;
                         />
                         for a leading logistics startup.
                       </div>
+                      <a href="" class="view-case-study">View Case Study</a>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -771,6 +805,7 @@ opacity 0.55s ease;
                         <br class="d-none d-md-block" />a publicly listed oil
                         and lubricant giant
                       </div>
+                      <a href="" class="view-case-study">View Case Study</a>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -1053,7 +1088,7 @@ opacity 0.55s ease;
             class="col-5 col-md-4 d-block d-md-flex justify-content-md-end align-items-md-center"
           >
             <div class="social-icons d-flex flex-wrap justify-content-around">
-              <a class="social-icons__item" href="#">
+              <a class="social-icons__item" href="https://twitter.com/PaperPencilLabs" target="_blank">
                 <div class="circular-bg-icon">
                   <img
                     class="__normal-icon"
@@ -1073,7 +1108,7 @@ opacity 0.55s ease;
                   />
                 </div>
               </a>
-              <a class="social-icons__item" href="#">
+              <a class="social-icons__item" href="https://dribbble.com/PaperPencil" target="_blank">
                 <div class="circular-bg-icon">
                   <img
                     class="__normal-icon"
@@ -1093,7 +1128,7 @@ opacity 0.55s ease;
                   />
                 </div>
               </a>
-              <a class="social-icons__item" href="#">
+              <a class="social-icons__item" href="https://www.instagram.com/paperpencillabs/" target="_blank">
                 <div class="circular-bg-icon">
                   <img
                     class="__normal-icon"
@@ -1113,7 +1148,7 @@ opacity 0.55s ease;
                   />
                 </div>
               </a>
-              <a class="social-icons__item" href="#">
+              <a class="social-icons__item" href="https://medium.com/@paperpencil" target="_blank">
                 <div class="circular-bg-icon">
                   <img
                     class="__normal-icon"
@@ -1156,7 +1191,7 @@ opacity 0.55s ease;
       integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
       crossorigin="anonymous"
     ></script>
-    <script src="vendor/scrollify/jquery.scrollify.js"></script>
+    
     <script src="js/main.min.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -1178,10 +1213,10 @@ opacity 0.55s ease;
 
         $(".menu-wrapper ul a").hover(function(){
           $(".menu-wrapper").addClass("hoverd");
-          $(this).css("color", "#fff");
+          $(this).css("opacity", "1");
         }, function(){
           $(".menu-wrapper").removeClass("hoverd")
-          $(this).css("color", "");
+          $(this).css("opacity", "");
         })
 
         if($(window).width() >= 960 ){

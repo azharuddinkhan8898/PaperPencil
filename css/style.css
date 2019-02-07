@@ -42,7 +42,7 @@ h2.sub-heading{
 .d-shape{position: relative;padding: 0 60px 50px;}
 .overlap-pattern{position: absolute;top: 60px;left: 8px;width: 250px;}
 #process .panel{height:100vh;}
-.panel.panel1{background:#1be0a8;display: block;}
+.panel.panel1{background:#00d498;display: block;}
 .panel.panel2{background:#8d0fef;}
 .panel.panel3{background:#f55;}
 .panel.panel4{background:#5c74ff;}
@@ -288,6 +288,12 @@ h1.main-heading + p {
 
   .header-wrapper.nostick {
     top: -104px;
+}
+
+
+.process-page .header-wrapper.nostick{
+  top: 0;
+    background: transparent;
 }
 
 
@@ -543,8 +549,9 @@ opacity 0.55s ease;
 }
 
 .menu-wrapper.hoverd ul a{
-  color: rgba(255,255,255,0.4);
+  opacity: 0.4;
 }
+
 
 .menu-wrapper ul li.small a{
   font-size: 20px;
@@ -580,7 +587,7 @@ opacity 0.55s ease;
   .section-nav,.overlap-pattern,.d-shape{display: none}
   .panel{display: block;position: relative;}
   section,div,#process .panel.active{display: block}
-  #process .panel.panel1{background:#1be0a8 url(../img/process/discovery-image.png) left top no-repeat;background-size: 192px;display: block;}
+  #process .panel.panel1{background:#00d498 url(../img/process/discovery-image.png) left top no-repeat;background-size: 192px;display: block;}
   #process .panel.panel2{background:#8d0fef url(../img/process/deciphter-image.png) left top no-repeat;background-size: 192px;display: block;}
   #process .panel.panel3{background:#f55 url(../img/process/design-image.png) left top no-repeat;background-size: 192px;display: block;}
   #process .panel.panel4{background:#5c74ff url(../img/process/developement-image.png) left top no-repeat;background-size: 192px;display: block;}

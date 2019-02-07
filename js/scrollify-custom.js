@@ -37,6 +37,13 @@ $(function() {
 
       onLeave: function(index, nextIndex, direction) {
 
+        console.log(nextIndex, index)
+        if(nextIndex == 2){
+          $(".process-page .header-wrapper").addClass("white-logo");
+        }
+        else{
+          $(".process-page .header-wrapper").removeClass("white-logo");
+        }
         
           // var index = index.index;
           // console.log(index, direction);
@@ -50,6 +57,8 @@ $(function() {
           
           if (index != 2)
               return true;
+
+          
           if (quickEvents == false) {
               quickEvents = true;
               setTimeout(function() { quickEvents = false; }, 500);
@@ -57,12 +66,12 @@ $(function() {
               if (index == 2 && direction === "down" && currentSlide < 4) {
                   currentSlide++;
                   fixslide()
-                  console.log(currentSlide)
+                  $(".process-page .header-wrapper").addClass("white-logo");
                   return false;
               } else if (index == 2 && direction === "up" && currentSlide > 1) {
                   currentSlide--;
                   fixslide()
-                  console.log(currentSlide)
+                  $(".process-page .header-wrapper").addClass("white-logo");
                   return false;
               }
           } else {
@@ -161,15 +170,15 @@ $(function() {
 
         $(".menu-wrapper ul a").hover(function(){
           $(".menu-wrapper").addClass("hoverd");
-          $(this).css("color", "#fff");
+          $(this).css("opacity", "1");
         }, function(){
           $(".menu-wrapper").removeClass("hoverd")
-          $(this).css("color", "");
+          $(this).css("opacity", "");
         })
         
         $('.section-nav ul li').click(function(){
             var secIndex = $(this).index();
-            console.log(secIndex)
+ 
             
             var processClass = $("#process").attr("class").split(" ");
             var background;
