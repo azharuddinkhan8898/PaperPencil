@@ -703,6 +703,25 @@ opacity 0.55s ease;
 }
 
 
+.more-case-studies .row a .view-case-study{
+  cursor: pointer;
+    border: 1px solid #fff;
+    padding: 7px 25px;
+    border-radius: 20px;
+    /* margin-top: 40px; */
+    /* display: inline-block; */
+    margin-bottom: 24px;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: #fff;
+    font-size: 14px;
+    outline: none;
+    opacity: 1; 
+    transition: all 0.15s ease;
+    transform: translateX(0px);
+}
+
 .more-case-studies .row{
   margin-bottom: 0px;
 }
