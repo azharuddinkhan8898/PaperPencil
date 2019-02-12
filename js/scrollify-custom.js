@@ -3,10 +3,6 @@ var fullpage;
 $(function() {
   var currentSlide = 1;
     var quickEvents = false;
-  if($(window).width() >= 960 ){
-
-
-
     var prevScrollpos = window.pageYOffset;
         window.onscroll = function() {
 
@@ -20,6 +16,7 @@ $(function() {
             $(".header-wrapper").addClass("nostick");
           }
           prevScrollpos = currentScrollPos;
+          if($(window).width() >= 960 ){
           if(window.pageYOffset <= 100){
             $(".process-page .header-wrapper").removeClass("nostick");
           }
@@ -27,6 +24,12 @@ $(function() {
             $(".process-page .header-wrapper").addClass("nostick");
           }
         }
+        }
+  if($(window).width() >= 960 ){
+
+
+
+    
     
 
     if($("#fullpage").length){

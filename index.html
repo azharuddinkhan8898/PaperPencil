@@ -365,6 +365,10 @@ opacity 0.55s ease;
     display: block !important;
   }
 
+  .header-wrapper{
+  padding: 20px 0px;
+}
+
   .view-case-study{
     margin-top:30px;
   }
@@ -393,10 +397,6 @@ opacity 0.55s ease;
 
   .career-page  .full-height .panel{
     height: auto;
-  }
-
-  .header-wrapper{
-    position: absolute;
   }
 
 
@@ -1206,8 +1206,6 @@ opacity 0.55s ease;
           $(this).css("opacity", "");
         })
 
-        if($(window).width() >= 960 ){
-
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;
@@ -1218,6 +1216,10 @@ opacity 0.55s ease;
           }
           prevScrollpos = currentScrollPos;
         }
+
+        if($(window).width() >= 960 ){
+
+        
       }
 
       })
