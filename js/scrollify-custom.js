@@ -40,7 +40,7 @@ $(function() {
 
       onLeave: function(index, nextIndex, direction) {
 
-        console.log(nextIndex.index, index.index)
+        console.log(nextIndex.index, index.index, direction)
         if(nextIndex.index == 2){
           $(".process-page .header-wrapper").addClass("white-logo");
         }
@@ -58,7 +58,7 @@ $(function() {
           //   $(".header-wrapper").removeClass("stay-top")
           // }
           
-          if (index.index != 2)
+          if (index.index != 1)
               return true;
 
           
@@ -66,12 +66,12 @@ $(function() {
               quickEvents = true;
               setTimeout(function() { quickEvents = false; }, 500);
 
-              if (index.index == 2 && direction === "down" && currentSlide < 4) {
+              if (index.index == 1 && direction === "down" && currentSlide < 4) {
                   currentSlide++;
                   fixslide()
                   $(".process-page .header-wrapper").addClass("white-logo");
                   return false;
-              } else if (index.index == 2 && direction === "up" && currentSlide > 1) {
+              } else if (index.index == 1 && direction === "up" && currentSlide > 1) {
                   currentSlide--;
                   fixslide()
                   $(".process-page .header-wrapper").addClass("white-logo");
